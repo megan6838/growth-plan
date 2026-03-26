@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Megan's Growth Plan — Iron Horse 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #FFFFFF;
+      --beige:   #F9F2E5;
+      --plum:    #5B2C49;
+      --steel:   #2B3E4D;
+      --green1:  #449E81;
+      --green2:  #A7C163;
+      --blue:    #98CDFE;
+      --yellow:  #FFCC00;
+      --orange:  #FFBA4E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Onest', sans-serif;
+      background: var(--beige);
+      color: var(--steel);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--steel);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      border-bottom: 2px solid var(--green1);
+    }
+
+    .nav-logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span {
+      color: var(--green2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--plum);
+      padding: 5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(68,158,129,0.12);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: 10%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(152,205,254,0.07);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green2);
+      border: 1px solid rgba(167,193,99,0.4);
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--green2);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--yellow);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .section-wrap {
+      padding: 4rem 2rem;
+    }
+
+    .section-wrap.dark {
+      background: var(--steel);
+    }
+
+    .section-wrap.plum {
+      background: var(--plum);
+    }
+
+    .section-wrap.green {
+      background: var(--green1);
+    }
+
+    .inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green1);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-wrap.dark .section-eyebrow,
+    .section-wrap.plum .section-eyebrow {
+      color: var(--green2);
+    }
+
+    .section-wrap.green .section-eyebrow {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--steel);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-wrap.dark .section-title,
+    .section-wrap.plum .section-title,
+    .section-wrap.green .section-title {
+      color: var(--white);
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: rgba(43,62,77,0.65);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-wrap.dark .section-desc,
+    .section-wrap.plum .section-desc,
+    .section-wrap.green .section-desc {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── PHASE CARDS ── */
+    .phases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: rgba(43,62,77,0.1);
+      border: 1px solid rgba(43,62,77,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .phase-card {
+      background: var(--white);
+      padding: 1.75rem;
+    }
+
+    .phase-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green1);
+      margin-bottom: 0.75rem;
+    }
+
+    .phase-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--steel);
+      margin-bottom: 0.4rem;
+    }
+
+    .phase-dates {
+      font-size: 12px;
+      color: var(--green1);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .phase-desc {
+      font-size: 13px;
+      color: rgba(43,62,77,0.65);
+      line-height: 1.55;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; }
+
+    .timeline-group {
+      margin-bottom: 3rem;
+    }
+
+    .tl-week {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green1);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(43,62,77,0.1);
+    }
+
+    .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .task-item {
+      display: grid;
+      grid-template-columns: 32px 1fr auto;
+      align-items: start;
+      gap: 14px;
+      background: var(--white);
+      border: 1px solid rgba(43,62,77,0.08);
+      border-radius: 4px;
+      padding: 14px 16px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .task-item:hover {
+      border-color: var(--green1);
+      transform: translateX(3px);
+    }
+
+    .task-dot-wrap {
+      display: flex;
+      justify-content: center;
+      padding-top: 4px;
+    }
+
+    .task-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-pipeline { background: var(--plum); }
+    .dot-aeo      { background: var(--green1); }
+    .dot-brand    { background: #D85A30; }
+    .dot-ops      { background: var(--steel); }
+    .dot-career   { background: #BA7517; }
+
+    .task-body {}
+
+    .task-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--steel);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .task-detail {
+      font-size: 13px;
+      color: rgba(43,62,77,0.65);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    .tag-pipeline { background: rgba(91,44,73,0.1); color: var(--plum); }
+    .tag-aeo      { background: rgba(68,158,129,0.12); color: #2d7a63; }
+    .tag-brand    { background: rgba(216,90,48,0.1); color: #a33a18; }
+    .tag-ops      { background: rgba(43,62,77,0.1); color: var(--steel); }
+    .tag-career   { background: rgba(186,117,23,0.1); color: #7a4c0a; }
+
+    .task-deadline {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(43,62,77,0.4);
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    /* ── MILESTONES ── */
+    .milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .milestone-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ms-diamond {
+      width: 10px;
+      height: 10px;
+      background: var(--yellow);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .ms-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.4;
+    }
+
+    .ms-date {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+    }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: rgba(43,62,77,0.65);
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── FOCUS BOX ── */
+    .focus-box {
+      background: var(--yellow);
+      border-radius: 4px;
+      padding: 2rem 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .focus-box h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--plum);
+      margin-bottom: 0.75rem;
+    }
+
+    .focus-box p {
+      font-size: 14px;
+      color: var(--plum);
+      opacity: 0.85;
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    /* ── PRIORITY SECTION ── */
+    .priority-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .priority-card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      transition: background 0.2s;
+    }
+
+    .priority-card:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .priority-rank {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--yellow);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .priority-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .priority-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--steel);
+      border-top: 2px solid var(--green1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    footer span {
+      color: var(--green2);
+    }
+
+    /* ── FADE IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .section-wrap { padding: 3rem 1.25rem; }
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .hero-stats { gap: 1.5rem; }
+      .task-item { grid-template-columns: 24px 1fr; }
+      .task-deadline { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">iron horse <span>●</span></div>
+    <ul class="nav-links">
+      <li><a href="#phases">Phases</a></li>
+      <li><a href="#plan">The plan</a></li>
+      <li><a href="#milestones">Milestones</a></li>
+      <li><a href="#priorities">Priorities</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner fade-up" style="animation-delay:0.1s">
+      <div class="hero-tag">Growth plan · March 2026 – March 2027</div>
+      <h1>From support function<br/>to <em>pipeline engine.</em></h1>
+      <p class="hero-sub">A 12-month plan to understand the sales motion, build repeatable demand systems, and prove marketing's impact on revenue — while clearing the immediate backlog.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">$15M</span>
+          <span class="stat-label">Revenue target</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">10–15</span>
+          <span class="stat-label">New clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">30%</span>
+          <span class="stat-label">Expansion goal</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Phases</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASES OVERVIEW -->
+  <section class="section-wrap" id="phases">
+    <div class="inner">
+      <div class="section-eyebrow">Overview</div>
+      <h2 class="section-title">Three phases, one north star</h2>
+      <p class="section-desc">Every task maps to a phase. Don't skip ahead — Phase 1 feeds Phase 2 feeds Phase 3.</p>
+      <div class="phases">
+        <div class="phase-card">
+          <div class="phase-num">Phase 1</div>
+          <div class="phase-title">Understand the sales motion</div>
+          <div class="phase-dates">March 26 – April 30</div>
+          <div class="phase-desc">Clear the launch backlog. Get the closed-won data from Uzair. Have the Daniel meeting. Understand why leads aren't converting before building anything.</div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 2</div>
+          <div class="phase-title">Build the engine</div>
+          <div class="phase-dates">May – July</div>
+          <div class="phase-desc">Armed with what you learned, build ICP scoring, nurture sequences, and one signal-based outbound motion. Start tracking marketing-sourced pipeline.</div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 3</div>
+          <div class="phase-title">Prove and document</div>
+          <div class="phase-dates">August – March 2027</div>
+          <div class="phase-desc">Keep the engine running. Compound results. Write the case study you'll take into interviews. Evaluate paid media exposure. Get AEO to Engineer stage.</div>
+        </div>
+      </div>
+
+      <div class="focus-box">
+        <h3>The hinge point: the Daniel meeting</h3>
+        <p>Everything in Phase 2 depends on what you learn in Phase 1. The ICP profile, nurture sequences, and signal-based motion all need to be built on real data — not guesses. The Daniel meeting and Uzair's closed-won data are the inputs that make the rest of this work. Don't skip ahead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL PLAN -->
+  <section class="section-wrap" style="background: var(--beige);" id="plan">
+    <div class="inner">
+      <div class="section-eyebrow">The plan</div>
+      <h2 class="section-title">Every task, with deadlines</h2>
+      <p class="section-desc">Sorted by week. Each item has a category, what to actually do, and when it's due.</p>
+
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot dot-pipeline"></span>Pipeline / sales intelligence</div>
+        <div class="legend-item"><span class="legend-dot dot-aeo"></span>AEO</div>
+        <div class="legend-item"><span class="legend-dot dot-brand"></span>Rebrand</div>
+        <div class="legend-item"><span class="legend-dot dot-ops"></span>Ops / HubSpot</div>
+        <div class="legend-item"><span class="legend-dot dot-career"></span>Career building</div>
+      </div>
+
+      <!-- PHASE 1 BANNER -->
+      <div style="background:var(--plum);color:var(--white);padding:1rem 1.5rem;border-radius:4px;margin-bottom:2rem;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green2);margin-bottom:4px;">Phase 1 · March 26 – April 30</div>
+        <div style="font-size:15px;font-weight:700;">Understand the sales motion</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:3px;">Clear the backlog. Get the data. Listen before building.</div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- WEEK 1 -->
+        <div class="timeline-group">
+          <div class="tl-week">This week — March 26–28</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Request closed-won deal data from Uzair</div>
+                <div class="task-detail">Ask for the last 10–15 closed clients: company size, vertical, problem they were solving, how they found IH, deal size if possible. This is the most important thing you can do right now.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Mar 28</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Schedule meeting with Daniel</div>
+                <div class="task-detail">Block 45–60 min. Come with the question list. Goal: understand volume, where leads come from, why deals stall, and what a good-fit client looks like to him.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Mar 28</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">AEO webinar prep — final push</div>
+                <div class="task-detail">Confirm promotion is live, reminder emails scheduled, Webflow + AirOps co-promotion confirmed, run-of-show ready.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">Apr 1</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WEEK 2 -->
+        <div class="timeline-group">
+          <div class="tl-week">Week of March 31 – April 4</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">AEO webinar — live (April 2)</div>
+                <div class="task-detail">Execute the live event with Webflow and AirOps.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">Apr 2</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">Post-webinar follow-up sequence</div>
+                <div class="task-detail">Send attendee + no-show emails, share leads with Webflow and AirOps, post on social (LinkedIn recap + key takeaways), upload recording. Get this done within 48 hours of the event.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">Apr 4</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Daniel meeting — sales motion diagnostic</div>
+                <div class="task-detail">Use the question list. Take notes. After: write a 1-page summary of what you learned and share with Uzair as a "here's what I'm seeing" document. This signals you're taking pipeline seriously.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Apr 4</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WEEK 3 -->
+        <div class="timeline-group">
+          <div class="tl-week">Week of April 7–11</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-brand"></div></div>
+              <div class="task-body">
+                <div class="task-name">Rebrand assets and announcement prep</div>
+                <div class="task-detail">Finalize slide updates, review blog draft, confirm social and press schedule. Build a simple launch checklist so nothing slips on launch day.</div>
+                <span class="tag tag-brand">brand</span>
+              </div>
+              <div class="task-deadline">Apr 11</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-ops"></div></div>
+              <div class="task-body">
+                <div class="task-name">HubSpot cleanup — block 1 (2 hrs)</div>
+                <div class="task-detail">First half of the team cleanup tasks. Do this in a focused block, not scattered.</div>
+                <span class="tag tag-ops">ops</span>
+              </div>
+              <div class="task-deadline">Apr 11</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Review closed-won data from Uzair</div>
+                <div class="task-detail">Look for patterns: industry, size, problem, how they found IH. Write down 3–5 things that are true about clients that closed. This becomes the foundation for ICP refinement.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Apr 11</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WEEK 4 -->
+        <div class="timeline-group">
+          <div class="tl-week">Week of April 14–18</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">Exit5 podcast airs — Uzair on April 14</div>
+                <div class="task-detail">Have post-podcast plan ready: LinkedIn post from Uzair's account (or yours amplifying), clip pull if possible, newsletter mention, follow-up from listeners. Get this done same week.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">Apr 18</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-brand"></div></div>
+              <div class="task-body">
+                <div class="task-name">Rebrand launch</div>
+                <div class="task-detail">Blog goes live, social posts go out, press distributed, internal team notified. You own the coordination of all of this.</div>
+                <span class="tag tag-brand">brand</span>
+              </div>
+              <div class="task-deadline">Apr 18</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-ops"></div></div>
+              <div class="task-body">
+                <div class="task-name">HubSpot cleanup — block 2 (2 hrs)</div>
+                <div class="task-detail">Second half of cleanup tasks. Done.</div>
+                <span class="tag tag-ops">ops</span>
+              </div>
+              <div class="task-deadline">Apr 18</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WEEK 5 -->
+        <div class="timeline-group">
+          <div class="tl-week">Week of April 21–25</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-ops"></div></div>
+              <div class="task-body">
+                <div class="task-name">ABM re-engagement campaign — launch</div>
+                <div class="task-detail">Get the AEM client sequences out. These should already be built; this is the execution week. Track open rates and any responses.</div>
+                <span class="tag tag-ops">ops</span>
+              </div>
+              <div class="task-deadline">Apr 25</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">April newsletter</div>
+                <div class="task-detail">Include: rebrand announcement, AEO webinar recap + on-demand link, Exit5 podcast mention. One useful piece of original insight. Keep it tight.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Apr 25</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-career"></div></div>
+              <div class="task-body">
+                <div class="task-name">Lunch and Learn — scope and identify target</div>
+                <div class="task-detail">Pick 1–2 companies where Uzair has a warm relationship or IH has credibility. Define the format: 45-min talk + Q&A? Start with one company to prove the model before scaling.</div>
+                <span class="tag tag-career">career</span>
+              </div>
+              <div class="task-deadline">Apr 25</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PHASE 2 BANNER -->
+        <div style="background:var(--steel);color:var(--white);padding:1rem 1.5rem;border-radius:4px;margin-bottom:2rem;margin-top:1rem;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;">Phase 2 · May – July</div>
+          <div style="font-size:15px;font-weight:700;">Build the engine</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:3px;">Armed with what you learned, start building systems that generate and convert pipeline. One motion at a time.</div>
+        </div>
+
+        <!-- MAY -->
+        <div class="timeline-group">
+          <div class="tl-week">May — by May 16</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Define ICP profile + build HubSpot lead scoring</div>
+                <div class="task-detail">Based on Uzair's closed-won data and Daniel's input, write a 1-page ICP doc. Then build a simple lead scoring model in HubSpot that flags good-fit leads vs. noise. Even a rough model is better than none.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">May 16</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MAY-JUNE -->
+        <div class="timeline-group">
+          <div class="tl-week">May — by May 30</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Build 2–3 nurture sequences for unconverted leads</div>
+                <div class="task-detail">"Not now" doesn't mean "never." Build sequences in HubSpot for leads that talked to sales and went cold. 60–90 day cadence with useful content. Iron Horse voice. This runs on autopilot once built.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">May 30</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">AEO system: move from Analyze to Generate stage</div>
+                <div class="task-detail">Have a prioritized list of content gaps from Profound and at least 2 pieces shipped to address them. Track citation movement before and after publishing.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">May 30</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- JUNE -->
+        <div class="timeline-group">
+          <div class="tl-week">June — by June 20</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Build one signal-based outbound motion using Demandbase</div>
+                <div class="task-detail">Pick one trigger (e.g. intent score crosses threshold for "demand gen agency"). When triggered: LinkedIn ad + SDR task + targeted content piece. Document it so it's repeatable and you can demo it in an interview.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Jun 20</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="timeline-group">
+          <div class="tl-week">June — by June 30</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-career"></div></div>
+              <div class="task-body">
+                <div class="task-name">Lunch and Learn — execute first one</div>
+                <div class="task-detail">Coordinate logistics, prep Uzair's talk, handle follow-up. Write a debrief: what went well, would the company engage further, is this a scalable format?</div>
+                <span class="tag tag-career">career</span>
+              </div>
+              <div class="task-deadline">Jun 30</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-pipeline"></div></div>
+              <div class="task-body">
+                <div class="task-name">Start tracking marketing-sourced pipeline in HubSpot</div>
+                <div class="task-detail">Set up a report showing contacts sourced or influenced by marketing programs. Even 1–2 conversations attributed to marketing is a start. This number is your north star metric for the next 12 months.</div>
+                <span class="tag tag-pipeline">pipeline</span>
+              </div>
+              <div class="task-deadline">Jun 30</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PHASE 3 BANNER -->
+        <div style="background:var(--green1);color:var(--white);padding:1rem 1.5rem;border-radius:4px;margin-bottom:2rem;margin-top:1rem;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:4px;">Phase 3 · August – March 2027</div>
+          <div style="font-size:15px;font-weight:700;">Prove and document</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.65);margin-top:3px;">Keep the engine running, compound the results, and document everything you can walk through in an interview.</div>
+        </div>
+
+        <!-- AUGUST -->
+        <div class="timeline-group">
+          <div class="tl-week">August — by August 1</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-ops"></div></div>
+              <div class="task-body">
+                <div class="task-name">Q3 pipeline contribution report</div>
+                <div class="task-detail">Write a simple internal report: what marketing programs ran, how many leads they sourced, how many converted to sales conversations, any pipeline influenced. Share with Uzair. Make this a habit.</div>
+                <span class="tag tag-ops">ops</span>
+              </div>
+              <div class="task-deadline">Aug 1</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SEPTEMBER -->
+        <div class="timeline-group">
+          <div class="tl-week">September — by September 30</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-aeo"></div></div>
+              <div class="task-body">
+                <div class="task-name">AEO system: reach Engineer stage</div>
+                <div class="task-detail">Automated alerts live in Profound, Slack notifications set up, bi-weekly sprint cadence documented. The system runs without you rebuilding it from scratch each cycle.</div>
+                <span class="tag tag-aeo">aeo</span>
+              </div>
+              <div class="task-deadline">Sep 30</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DECEMBER -->
+        <div class="timeline-group">
+          <div class="tl-week">End of year — by December 31</div>
+          <div class="task-list">
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-career"></div></div>
+              <div class="task-body">
+                <div class="task-name">Write your pipeline engine case study</div>
+                <div class="task-detail">Document: the problem (leads not converting, CEO-sourced pipeline), what you built (ICP model, nurture sequences, signal-based motion), and the results. Specific numbers, named outcomes. This is what you bring to interviews.</div>
+                <span class="tag tag-career">career</span>
+              </div>
+              <div class="task-deadline">Dec 31</div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-dot-wrap"><div class="task-dot dot-career"></div></div>
+              <div class="task-body">
+                <div class="task-name">Evaluate paid media exposure</div>
+                <div class="task-detail">Have a conversation with Uzair or Ellen about running a small LinkedIn or Google Ads test — $2–5k budget, 60 days. Owning a paid campaign and reporting on ROAS gives you something concrete to talk about in growth roles.</div>
+                <span class="tag tag-career">career</span>
+              </div>
+              <div class="task-deadline">Dec 31</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section class="section-wrap plum" id="milestones">
+    <div class="inner">
+      <div class="section-eyebrow">Key milestones</div>
+      <h2 class="section-title">The moments that matter</h2>
+      <p class="section-desc">These are your accountability checkpoints. If you're hitting these, you're on track.</p>
+
+      <div class="milestone-grid">
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">Daniel meeting complete + sales motion summary written</div>
+            <div class="ms-date">April 4</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">Rebrand launched across all channels</div>
+            <div class="ms-date">April 18</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">ICP profile + HubSpot lead scoring live</div>
+            <div class="ms-date">May 16</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">First nurture sequences running in HubSpot</div>
+            <div class="ms-date">May 30</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">Signal-based outbound motion live in Demandbase</div>
+            <div class="ms-date">June 20</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">Marketing-sourced pipeline tracking starts</div>
+            <div class="ms-date">June 30</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">AEO system at Engineer stage — self-running</div>
+            <div class="ms-date">September 30</div>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="ms-diamond"></div>
+          <div>
+            <div class="ms-text">Pipeline case study written and ready for interviews</div>
+            <div class="ms-date">December 31</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIORITIES -->
+  <section class="section-wrap dark" id="priorities">
+    <div class="inner">
+      <div class="section-eyebrow">Top priorities</div>
+      <h2 class="section-title">The skills that will matter most</h2>
+      <p class="section-desc">Based on the growth roles you're targeting, these are the three capabilities to build over the next 12 months.</p>
+
+      <div class="priority-grid">
+
+        <div class="priority-card">
+          <div class="priority-rank">01</div>
+          <div class="priority-name">Full-funnel pipeline ownership</div>
+          <div class="priority-desc">Connect marketing work to MQLs, SQLs, and pipeline. Build the HubSpot attribution report. Own the number, not just the activity.</div>
+        </div>
+
+        <div class="priority-card">
+          <div class="priority-rank">02</div>
+          <div class="priority-name">AI-native, tool-fluent execution</div>
+          <div class="priority-desc">You're already ahead with AEO and AirOps. The next step: document specific workflows you've built and the efficiency gains they produced.</div>
+        </div>
+
+        <div class="priority-card">
+          <div class="priority-rank">03</div>
+          <div class="priority-name">Signal-based demand generation</div>
+          <div class="priority-desc">Build one end-to-end motion where a behavioral signal (Demandbase intent) triggers a targeted campaign. Document it. Demo it.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Iron Horse internal · Megan's growth plan · <span>March 2026 – March 2027</span></p>
+  </footer>
+
+  <script>
+    // Fade in elements on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.task-item, .milestone-card, .phase-card, .priority-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(12px)';
+      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
